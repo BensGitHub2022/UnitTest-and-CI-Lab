@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import com.example.CILab;
 import com.example.CILabInterface;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CILabTest {
 
@@ -25,13 +25,25 @@ public class CILabTest {
 
     @Test
     public void detectCapitalUseTest1() {
-       fail("Not yet implemented");
-
+       myString.setString("ABC");
+       assertTrue(myString.detectCapitalUse());
     }
+
     @Test
     public void detectCapitalUseTest2() {
-        fail("Not yet implemented");
+        myString.setString("Abc");
+        assertTrue(myString.detectCapitalUse());
     }
 
+    @Test
+    public void detectCapitalUseTest3() {
+        myString.setString("abc");
+        assertTrue(myString.detectCapitalUse());
+    }
 
+    @Test
+    public void detectCapitalUseTest4() {
+        myString.setString("aBc");
+        assertFalse(myString.detectCapitalUse());
+    }
 }
