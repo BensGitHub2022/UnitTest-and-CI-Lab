@@ -1,6 +1,11 @@
+package com.example;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import com.example.CILab;
+import com.example.CILabInterface;
 
 import static org.junit.jupiter.api.Assertions.fail;
 
